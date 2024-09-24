@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Protest Guerrilla", sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+h1 {
+    letter-spacing: 2px;
+}
+
+#name {
+    color: orange;
+    font-size: 3rem;
+}
+
+#va {
+    color: rgb(117, 32, 32);
+    font-size: 3rem;
+}
+
+#voice {
+    height: 10vh;
+    max-width: 100%;
+    display: none;
+}
+
+.img{
+    height: 300px;
+}
+#startBtn {
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: rgb(117, 32, 32);
+    color: orange;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 3px 3px 12px orange;
+    transition: all 0.5s;
+}
+
+#startBtn:hover {
+    box-shadow: 2px 2px 20px orange;
+    letter-spacing: 2px;
+}
+
+#logo {
+    max-height: 300px; /* Limit max height for larger screens */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* For smaller screens (like tablets) */
+@media (max-width: 768px) {
+    #logo {
+        max-height: 300px; /* Adjust the size for smaller screens */
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 576px) {
+    #logo {
+        max-height: 400px; /* Further adjust for mobile */
+    }
+}
+/* Responsiveness for smaller
