@@ -65,21 +65,36 @@ function takeCommand(message) {
   ) {
     speak("Hello, what can I help you with?");
   } else if (message.includes("who are you")) {
-    speak("I am a virtual assistant, created by Vansh Sar.");
+    speak("I am a virtual assistant, created by Vansh Sir.");
   } else if (message.includes("tumhara naam kya hai tum kaisi ho")) {
-    speak("mera naam vansia hai , or mai bahut achee hu, and aap kaise ho?");
+    speak("mera naam Vansia hai, aur mai bahut achi hu, aap kaise ho?");
   } else if (
-    message.includes(
-      "tumhen kisne banaya hai" || "who build you" || "who makes you"
-    )
+    message.includes("tumhen kisne banaya hai") ||
+    message.includes("who build you") ||
+    message.includes("who makes you")
   ) {
-    speak("mujhe Vansh Sar ne banaya hai");
+    speak("Mujhe Vansh Sir ne banaya hai.");
   } else if (message.includes("open youtube")) {
     speak("Opening YouTube");
     window.open("https://www.youtube.com/");
   } else if (message.includes("open google")) {
     speak("Opening Google");
     window.open("https://www.google.com/");
+  } else if (message.includes("open calculator")) {
+    speak("Opening calculator");
+    // JavaScript can't directly open system apps like calculator, so this might not work.
+  } else if (message.includes("open whatsapp")) {
+    speak("Opening WhatsApp");
+    window.open("https://web.whatsapp.com/"); // Opens WhatsApp Web
+  } else if (message.includes("open instagram")) {
+    speak("Opening instagarm");
+    window.open("instagram://"); // Opens WhatsApp Web
+  } else if (message.includes("time")) {
+    let time = new Date().toLocaleString(undefined, {
+      hour: "numeric",
+      minute: "numeric",
+    });
+    speak(time);
   } else {
     let query = message.replace(/vansia|vansiya/gi, "").trim();
     speak(`This is what I found on the internet regarding ${query}`);
